@@ -27,11 +27,14 @@ public class BinaryTree {
 
     public String toString(TreeNode current){
         if (current == null) {
-            return null;
+            return "";
         }
         return current.toString() + " " + this.toString(current.left) + " " + this.toString(current.right);
     }
 
+    public int size() {
+        return size(this.root);
+    }
 
     public int size(TreeNode current){
         if (current == null) {
